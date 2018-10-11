@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.exodusredux.artwork" version="1.0.1" name="Exodus Redux Artwork" provider-name="I-A-C">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Exodus Redux Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>

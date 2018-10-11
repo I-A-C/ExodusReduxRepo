@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="32310">
+        <setting id="appearance.alt" type="action" label="32311" default="-" option="close" action="RunPlugin(plugin://plugin.video.exodusredux/?action=artwork)" visible="!System.HasAddon(script.exodusredux.artwork)" />
+        <setting id="appearance.1" type="select" label="32311" values="Exodus|Covenant|Incursion|Stealth|Exuary" default="Exodus" visible="System.HasAddon(script.exodusredux.artwork)" />
+        <setting id="scrapers.timeout.1" type="slider" label="32312" default="60" range="10,60" option="int" />
+        <setting id="trakt.user" type="text" default="" visible="false" />
+        <setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-1,)" />
+        <setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-2,)" />
+        <setting id="api.language" type="select" label="32316" values="AUTO|Bulgarian|Chinese|Croatian|Czech|Danish|Dutch|English|Finnish|French|German|Greek|Hebrew|Hungarian|Italian|Japanese|Korean|Norwegian|Polish|Portuguese|Romanian|Russian|Serbian|Slovak|Slovenian|Spanish|Swedish|Thai|Turkish|Ukrainian" default="AUTO" />
+        <setting id="providers.lang" type="select" label="32360" values="English|German|German+English|French|French+English|Polish|Polish+English|Korean|Korean+English|Russian|Russian+English|Spanish|Spanish+English|Italian|Italian+English|Greek|Greek+English" default="English" />
+        <setting id="fanart" type="bool" label="32318" default="true" />
+        <setting id="showunaired" type="bool" label="32570" default="true" />
+        <setting id="hidecinema" type="bool" label="32571" default="false" />
+        <setting type="lsep" label="32319" />
+        <setting id="movie.widget" type="enum" label="32320" lvalues="32302|32321|32322|32323|32324|32580" default="1" />
+        <setting id="prgr.sortorder" type="enum" label="32584" lvalues="32585|32586" default="1" visible="!eq(-13,)" />
+        <setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" />
+        <setting type="lsep" label="Auto Trakt Collections Syncing" />
+        <setting id="autoTraktOnStart" type="bool" label="Sync on Kodi Start" default="False" />
+        <setting id="schedTraktTime" type="slider" label="Schedule Updates Every - Hour/s" default="0" range="0,24" option="int" />
+        <setting type="lsep" label="0 Value Disables Scheduling" />
+    </category>
+    <category label="TV Shows">
+        <setting id="flatten.tvshows" type="bool" label="32317" default="false" />
+        <setting id="tv.widget.alt" type="enum" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-11,)" />
+        <setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-12,)" />
+        <setting id="tv.specials" type="bool" label="Include Special Episodes" default="false" />
+    </category>
+    <category label="32330">
+        <setting id="hosts.mode" type="enum" label="32331" lvalues="32332|32333|32334" default="1" />
+        <setting id="progress.dialog" type="enum" label="32335" lvalues="32336|32337" default="0" />
+        <setting id="prem.identify" type="enum" label="32588" lvalues="32589|32590|32591|32592|32593|32594|32595|32596|32597|32598" default="0" />
+        <setting id="preemptive.termination" type="bool" label="Pre-emptive Termination" default="False" />
+        <setting id="preemptive.limit" type="slider" label="Pre-emptive Limit" default="10" range="1,50" option="int" />
+        <setting type="lsep" label="32338" />
+        <setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
+        <setting id="autoplay.sd" type="bool" label="Autoplay SD Quality only" default="false" />
+        <setting id="sources.extrainfo" type="bool" label="32587" default="true" />
+        <setting id="HEVC" type="bool" label="32363" default="true" />
+        <setting id="hosts.captcha" type="bool" label="32341" default="true" />
+        <setting id="hosts.sort.provider" type="bool" label="32342" default="true" />
+        <setting id="debrid.only" type="bool" label="Debrid Sources Only" default="false" />
+        <setting type="lsep" label="32343" />
+        <setting id="bookmarks" type="bool" label="32344" default="true" />
+        <setting id="bookmarks.trakt" type="bool" label="Trakt Bookmarks" default="false" enable="!eq(-1,false)"/>
+        <setting id="bookmarks.auto" type="bool" label="Auto Resume" default="false" enable="!eq(-2,false)" />
+        <setting type="lsep" label="32372" />
+        <setting id="crefresh" type="bool" label="32373" default="false" />
+    </category>
+    <category label="32345">
+        <setting label="Module Settings" type="lsep" />
+        <setting type="sep" />
+        <setting type="lsep" label="Choose From Built-in Providers (Default) or Lambda Scrapers" />
+        <setting id="module.provider" type="labelenum" label="Choose Module Provider Source" default="Default" values="Default|Lambda Scrapers" />
+        <setting id="open.settings" type="action" label="Open Lambda Scrapers Settings" option="close" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=LambdaSettings)" />
+        <setting type="sep" />
+        <setting label="Built-in Providers" type="lsep" />
+        <setting id="builtin.providers.enableall" type="action" label="Enable all Built-in Providers" option="close" action="RunPlugin(plugin://plugin.video.exodusredux/?action=enableAll)" />
+        <setting id="builtin.providers.disableall" type="action" label="Disable all Built-in Providers" option="close" action="RunPlugin(plugin://plugin.video.exodusredux/?action=disableAll)" />
+        <setting type="sep" />
+        <setting id="provider.trailers" type="bool" label="TRAILERS" default="true" />
+    </category>
+    <category label="32346">
+        <setting type="lsep" label="FANART.TV" />
+        <setting type="lsep" label="32582" default="" />
+        <setting type="lsep" label="32583" default="" />
+        <setting id="fanart.tv.user" type="text" label="32309" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="TMDb" />
+        <setting id="tm.user" type="text" option="hidden" label="32309" default="3b3eccd1c6bc0f679223fdbd7cf0d06d" />
+        <setting type="sep" />
+        <setting type="lsep" label="Trakt" />
+        <setting id="trakt.user" type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.exodusredux/?action=authTrakt)" />
+        <setting id="trakt.token" type="text" visible="false" label="" default="" />
+        <setting id="trakt.refresh" type="text" visible="false" label="" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="IMDb" />
+        <setting id="imdb.user" type="text" label="32303" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="32538" />
+        <setting type="lsep" label="32539" />
+        <setting id="open_smu_settings" type="action" label="32540" enable="true" option="close" action="RunPlugin(plugin://plugin.video.exodusredux/?action=smuSettings)" />
+        <setting type="sep" />
+        <setting type="lsep" label="Moviesplanet.is" />
+        <setting id="moviesplanet.user" type="text" label="32303" default="" />
+        <setting id="moviesplanet.pass" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="Streamlord.com" />
+        <setting id="streamlord.user" type="text" label="32303" default="" />
+        <setting id="streamlord.pass" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="Ororo.tv" />
+        <setting id="ororo.user" type="text" label="32304" default="" />
+        <setting id="ororo.pass" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="SerienStream.to" />
+        <setting id="serienstream.user" type="text" label="32304" default="" />
+        <setting id="serienstream.pass" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="Seriesever.net" />
+        <setting id="seriesever.user" type="text" label="32303" default="" />
+        <setting id="seriesever.pass" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="ALLUC" />
+        <setting id="alluc.api" type="text" label="32309" default="" />
+        <setting id="alluc.limit" type="labelenum" label="32581" default="100" values="10|20|30|40|50|60|70|80|90|100|150|200" />
+        <setting id="alluc.download" type="bool" label="32009" default="false" />
+        <setting type="sep" />
+        <setting type="lsep" label="Chillax.ws" />
+        <setting type="lsep" label="Security Warning: Chillax does not use SSL" />
+        <setting type="lsep" label="Your login details are not protected" />
+        <setting id="chillax.username" type="text" label="32303" default="" />
+        <setting id="chillax.password" type="text" option="hidden" label="32307" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="Furk.net" />
+        <setting id="furk.user_name" type="text" label="Furk Username" default="" />
+        <setting id="furk.user_pass" type="text" label="Furk Password" option="hidden" default="" />
+        <setting id="furk.api" type="text" label="Furk API Key" default="" />
+        <setting id="furk.mod.level" type="labelenum" label="Set Furk Moderation Level" default="Yes" values="No|Yes|Full" />
+        <setting id="furk.limit" label="Limit results" type="slider" default="25" range="5,5,200" option="int" />
+        <setting id="furk.auto.resolve" label="Auto Resolve Furk Packs" type="labelenum" default="Both" values="Both|Neither|Movies Only|Episodes Only"/>
+        <setting type="sep" />
+        <setting type="lsep" label="segos.es" />
+        <setting type="lsep" label="Need for more sources in PL scrapper segos" />
+        <setting type="lsep" label="Your login details are not protected" />
+        <setting id="segos.username" type="text" label="32303" default="" />
+        <setting id="segos.password" type="text" option="hidden" label="32307" default="" />
+    </category>
+    <category label="32541">
+        <setting id="library.movie" type="folder" label="32543" default="special://userdata/addon_data/plugin.video.exodusredux/Movies" />
+        <setting id="library.tv" type="folder" label="32544" default="special://userdata/addon_data/plugin.video.exodusredux/TVShows" />
+        <setting type="lsep" label="32542" />
+        <setting type="sep" />
+        <setting id="library.service.update" type="bool" label="32545" default="true" />
+        <setting id="library.service.notification" type="bool" label="32546" default="true" />
+        <setting type="sep" />
+        <setting id="library.update" type="bool" label="32547" default="true" />
+        <setting id="library.check" type="bool" label="32548" default="true" />
+        <setting type="sep" />
+        <setting id="library.importdelay" type="bool" label="24HR delay before import" default="true" />
+        <setting id="library.check_movie" type="bool" label="32549" default="false" />
+        <setting id="library.check_episode" type="bool" label="32550" default="false" />
+        <setting id="library.include_unknown" type="bool" label="32565" default="true" />
+    </category>
+    <category label="32347">
+        <setting id="downloads" type="bool" label="32348" default="false" />
+        <setting type="sep" />
+        <setting id="movie.download.path" type="folder" label="32349" enable="!eq(-2,false)" default="" />
+        <setting id="tv.download.path" type="folder" label="32350" enable="!eq(-3,false)" default="" />
+        <setting type="lsep" label="[CR]" />
+        <setting type="lsep" label="32351" />
+        <setting type="lsep" label="32352" />
+    </category>
+    <category label="32353">
+        <setting id="subtitles" type="bool" label="32354" default="false" />
+        <setting type="sep" />
+        <setting id="subtitles.utf" type="bool" label="32355" enable="!eq(-2,false)" default="false" />
+        <setting type="sep" />
+        <setting id="subtitles.lang.1" type="select" label="32356" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" enable="!eq(-4,false)" default="English" />
+        <setting id="subtitles.lang.2" type="select" label="32357" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" enable="!eq(-5,false)" default="English" />
+        <setting type="lsep" label="[CR]" />
+        <setting type="lsep" label="32358" />
+        <setting type="lsep" label="32359" />
+    </category>
+    <category label="32616">
+        <setting id="addon_debug" type="bool" label="Enable Debug" default="false" />
+        <setting id="debug.location" type="enum" label="32617" lvalues="32618|32619" default="0" />
+    </category>
+</settings>
