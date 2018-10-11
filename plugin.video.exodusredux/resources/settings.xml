@@ -52,7 +52,7 @@
         <setting label="Module Settings" type="lsep" />
         <setting type="sep" />
         <setting type="lsep" label="Choose From Built-in Providers (Default) or Lambda Scrapers" />
-        <setting id="module.provider" type="labelenum" label="Choose Module Provider Source" default="Default" values="Default|Lambda Scrapers" />
+        <setting id="module.provider" type="labelenum" label="Choose Module Provider Source" default="Lambda Scrapers" values="Default|Lambda Scrapers" />
         <setting id="open.settings" type="action" label="Open Lambda Scrapers Settings" option="close" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=LambdaSettings)" />
         <setting type="sep" />
         <setting label="Built-in Providers" type="lsep" />
