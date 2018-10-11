@@ -95,6 +95,20 @@
 		</extension>
 </addon>
 
+<addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.1" provider-name="I-A-C">
+	<extension point="xbmc.addon.repository" name="Exodus Redux Repo">
+		<info compressed="false">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Lambdascrapers</summary>
+		<description>Lambdascrapers</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="script.module.resolveurl" name="ResolveURL" version="5.0.16" provider-name="jsergio">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
