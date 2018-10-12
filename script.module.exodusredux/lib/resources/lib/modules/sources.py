@@ -1175,10 +1175,7 @@ class sources:
                 from lambdascrapers import sources
                 self.sourceDict = sources()
                 scrapers = [i[0] for i in self.sourceDict]
-                try:
-                    self.module_name = 'Yoda' if scrapers[0].split('_')[1].lower() == 'yoda' else \
-                                          'Placenta' if scrapers[0].split('_')[1].lower() == 'plac' else \
-                                          'Incursion' if scrapers[0].split('_')[1].lower() == 'incur' else 'Default'
+                try: self.module_name = scrapers[0].split('_')[1].upper()
                 except: self.module_name = 'All'
             else:
                 from resources.lib.sources import sources
