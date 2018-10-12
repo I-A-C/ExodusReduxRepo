@@ -119,7 +119,6 @@
         <setting id="furk.api" type="text" label="Furk API Key" default="" />
         <setting id="furk.mod.level" type="labelenum" label="Set Furk Moderation Level" default="Yes" values="No|Yes|Full" />
         <setting id="furk.limit" label="Limit results" type="slider" default="25" range="5,5,200" option="int" />
-        <setting id="furk.auto.resolve" label="Auto Resolve Furk Packs" type="labelenum" default="Both" values="Both|Neither|Movies Only|Episodes Only"/>
         <setting type="sep" />
         <setting type="lsep" label="segos.es" />
         <setting type="lsep" label="Need for more sources in PL scrapper segos" />

@@ -1047,7 +1047,6 @@ class movies:
 
         addToLibrary = control.lang(32551).encode('utf-8')
 
-        cm.append(('Settings', 'RunPlugin(%s?action=openSettings&query=0.0)' % sysaddon))
 
         for i in items:
             try:
@@ -1063,6 +1062,8 @@ class movies:
 
                 cm = []
 
+                cm.append(('Settings', 'RunPlugin(%s?action=openSettings&query=0.0)' % sysaddon))
+                
                 cm.append((playRandom, 'RunPlugin(%s?action=random&rtype=movie&url=%s)' % (sysaddon, urllib.quote_plus(i['url']))))
 
                 if queue == True:
