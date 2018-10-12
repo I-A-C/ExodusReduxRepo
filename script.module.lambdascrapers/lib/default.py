@@ -10,7 +10,6 @@ def ScraperChoice():
     sourceList = providerSources()
     control.idle()
     module_choice = 'All'
-    items = ['All', 'Yoda', 'Placenta', 'Incursion']
     select = control.selectDialog([i for i in sourceList])
     if select == -1: return
     module_choice = sourceList[select]

@@ -68,14 +68,12 @@ def getAllHosters():
     return list(set(appendList))
 
 def getScraperFolder(scraper_source):
-    if scraper_source.lower() == 'all':
-        return 'sources_ALL'
-    if scraper_source.lower() == 'incursion':
-        return 'sources_incursion'
-    if scraper_source.lower() == 'placenta':
-        return 'sources_placenta'
-    if scraper_source.lower() == 'yoda':
-        return 'sources_yoda'
+    import xbmcvfs
+    sf = [i for i in xbmcvfs.listdir(os.path.dirname(__file__))[0] if not i == 'modules']
+    sn = getModuleName(sf)
+    for index, item in enumerate(sn):
+        if scraper_source.lower() == item.lower():
+            return sf[index]
 
 def getModuleName(scraper_folders):
     nameList = []
