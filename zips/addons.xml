@@ -35,7 +35,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.exodusredux" name="Exodus Redux Module" version="1.0.1" provider-name="I-A-C">
+<addon id="script.module.exodusredux" name="Exodus Redux Module" version="1.0.2" provider-name="I-A-C">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>
@@ -71,7 +71,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.lambdascrapers" name="Lambdascrapers Module" version="1.5.0" provider-name="I-A-C">
+<addon id="script.module.lambdascrapers" name="Lambdascrapers Module" version="1.5.1" provider-name="I-A-C">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.beautifulsoup4"/>

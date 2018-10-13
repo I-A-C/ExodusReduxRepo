@@ -299,7 +299,7 @@ class sources:
         progressDialog.create("{0} ({1} Module)".format(control.addonInfo('name'), self.module_name), '')
         progressDialog.update(0)
 
-#        self.prepareSources()
+        self.prepareSources()
 
         sourceDict = self.sourceDict
 
