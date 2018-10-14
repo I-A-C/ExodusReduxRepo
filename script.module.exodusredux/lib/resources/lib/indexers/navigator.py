@@ -328,14 +328,13 @@ class navigator:
         cache.cache_clear_search()
         control.infoDialog(control.lang(32057).encode('utf-8'), sound=True, icon='INFO')
 
-    def clearCacheAll(self):
+    def clearCacheSearch(self):
         control.idle()
-        yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
-        if not yes: return
-        from resources.lib.modules import cache
-        cache.cache_clear_all()
-        control.infoDialog(control.lang(32057).encode('utf-8'), sound=True, icon='INFO')
-
+        if control.yesnoDialog(control.lang(32056).encode('utf-8'), '', ''):
+            control.setSetting('tvsearch', '')
+            control.setSetting('moviesearch', '')
+            control.refresh()
+            
     def addDirectoryItem(self, name, query, thumb, icon, context=None, queue=False, isAction=True, isFolder=True):
         try: name = control.lang(name).encode('utf-8')
         except: pass
