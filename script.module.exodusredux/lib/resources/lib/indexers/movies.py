@@ -164,78 +164,46 @@ class movies:
             self.get(self.featured_link)
 
     def search(self):
-
         navigator.navigator().addDirectoryItem(32603, 'movieSearchnew', 'search.png', 'DefaultMovies.png')
-        try: from sqlite3 import dbapi2 as database
-        except: from pysqlite2 import dbapi2 as database
-
-        dbcon = database.connect(control.searchFile)
-        dbcur = dbcon.cursor()
-
-        try:
-            dbcur.executescript("CREATE TABLE IF NOT EXISTS movies (ID Integer PRIMARY KEY AUTOINCREMENT, term);")
-        except:
-            pass
-
-        dbcur.execute("SELECT * FROM movies ORDER BY ID DESC")
-        lst = []
-
-        delete_option = False
-        for (id,term) in dbcur.fetchall():
-            if term not in str(lst):
-                delete_option = True
-                navigator.navigator().addDirectoryItem(term, 'movieSearchterm&name=%s' % term, 'search.png', 'DefaultMovies.png')
-                lst += [(term)]
-        dbcur.close()
-
-        if delete_option:
+        search_history = control.setting('moviesearch')
+        if search_history:
+            for term in search_history.split('\n'):
+                if term:
+                    navigator.navigator().addDirectoryItem(term, 'movieSearchterm&name=%s' % term, 'search.png', 'DefaultMovies.png')
             navigator.navigator().addDirectoryItem(32605, 'clearCacheSearch', 'tools.png', 'DefaultAddonProgram.png')
-
-        navigator.navigator().endDirectory()
-
+        navigator.navigator().endDirectory()        
+        
+        
     def search_new(self):
-            control.idle()
+        t = control.lang(32010).encode('utf-8')
+        k = control.keyboard('', t) ; k.doModal()
+        q = k.getText().strip() if k.isConfirmed() else None
+        if not q: return
 
-            t = control.lang(32010).encode('utf-8')
-            k = control.keyboard('', t) ; k.doModal()
-            q = k.getText() if k.isConfirmed() else None
 
-            if (q == None or q == ''): return
+        search_history = control.setting('moviesearch')
+        if q not in search_history.split('\n'):
+            control.setSetting('moviesearch', q + '\n' + search_history)
 
-            try: from sqlite3 import dbapi2 as database
-            except: from pysqlite2 import dbapi2 as database
 
-            dbcon = database.connect(control.searchFile)
-            dbcur = dbcon.cursor()
-            dbcur.execute("INSERT INTO movies VALUES (?,?)", (None,q))
-            dbcon.commit()
-            dbcur.close()
-            url = self.search_link + urllib.quote_plus(q)
-            url = '%s?action=moviePage&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
-
+        url = self.search_link + urllib.quote_plus(q)
+        self.get(url)
+            
+            
     def search_term(self, name):
-            control.idle()
-
-            url = self.search_link + urllib.quote_plus(name)
-            url = '%s?action=moviePage&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
-
+        url = self.search_link + urllib.quote_plus(name)
+        self.get(url)
+        
+        
     def person(self):
-        try:
-            control.idle()
+        t = control.lang(32010).encode('utf-8')
+        k = control.keyboard('', t) ; k.doModal()
+        q = k.getText().strip() if k.isConfirmed() else None
+        if not q: return
 
-            t = control.lang(32010).encode('utf-8')
-            k = control.keyboard('', t) ; k.doModal()
-            q = k.getText() if k.isConfirmed() else None
 
-            if (q == None or q == ''): return
-
-            url = self.persons_link + urllib.quote_plus(q)
-            url = '%s?action=moviePersons&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
-        except:
-            return
+        url = self.persons_link + urllib.quote_plus(q)
+        self.persons(url)
 
 
     def genres(self):
@@ -1047,8 +1015,6 @@ class movies:
 
         addToLibrary = control.lang(32551).encode('utf-8')
 
-        cm.append(('Settings', 'RunPlugin(%s?action=openSettings&query=0.0)' % sysaddon))
-
         for i in items:
             try:
                 name = i['name']
@@ -1062,7 +1028,9 @@ class movies:
                 except: pass
 
                 cm = []
-
+                
+                cm.append(('Settings', 'RunPlugin(%s?action=openSettings&query=0.0)' % sysaddon))
+                
                 cm.append((playRandom, 'RunPlugin(%s?action=random&rtype=movie&url=%s)' % (sysaddon, urllib.quote_plus(i['url']))))
 
                 if queue == True:

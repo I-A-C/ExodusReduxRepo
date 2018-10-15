@@ -33,8 +33,8 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['allrls.co']
-        self.base_link = 'http://bestrls.xyz'
+        self.domains = ['oorls.xyz']
+        self.base_link = 'http://oorls.xyz'
         self.search_link = '?s=%s+%s&go=Search'
 
     def movie(self, imdb, title, localtitle, aliases, year):
