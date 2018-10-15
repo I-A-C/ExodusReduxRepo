@@ -33,8 +33,8 @@ from resources.lib.modules import utils
 
 BASE_URL = 'http://api.trakt.tv'
 #BASE_URL = 'https://api-v2launch.trakt.tv'
-V2_API_KEY = '46150347b5baa79600cb28f9888e8fae7a92defb02860f0fdf4ff3480450ee3b'
-CLIENT_SECRET = '54bc93a93f119d8ced87f9d708f5731e551d0c9f071f9b105a00c42703de92aa'
+V2_API_KEY = 'acc97918ace2b0a211957d574e7cd7c7bc7a59b9c949df625077f1d5fb107082'
+CLIENT_SECRET = '0f3e0b9096477ee0d373d1d354700449bf0fa648bef33c191db5845b346f16ef'
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 def __getTrakt(url, post=None):
