@@ -24,8 +24,8 @@
 	<assets>
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
-		<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-    </assets>
+		<screenshot></screenshot>
+	</assets>
 	<news></news>
 	</extension>
 </addon>
