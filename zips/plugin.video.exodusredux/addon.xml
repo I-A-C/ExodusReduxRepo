@@ -7,7 +7,7 @@
 		<import addon="script.exodusredux.metadata" />
 		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
-		<import addon="script.module.lambdascrapers" optional="true" />
+		<import addon="script.module.lambdascrapers" />
 		<import addon="script.module.metahandler" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">

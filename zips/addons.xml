@@ -8,7 +8,7 @@
 		<import addon="script.exodusredux.metadata" />
 		<import addon="script.module.resolveurl" />
 		<import addon="script.module.requests" />
-		<import addon="script.module.lambdascrapers" optional="true" />
+		<import addon="script.module.lambdascrapers" />
 		<import addon="script.module.metahandler" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
@@ -86,16 +86,16 @@
 
 <addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.3" provider-name="I-A-C">
 	<extension point="xbmc.addon.repository" name="Exodus Redux Repo">
-	<dir>
-        <info compressed="false">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/I-A-C/ExodusReduxRepo/tree/master/zips</datadir>
-	</dir>
-	<dir>
+          <dir>
+		<info compressed="false">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/</datadir>
+          </dir>
+          <dir>
 		<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-	</dir>
+          </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Exodus Redux is a educational add-on. We do not host any of the contents streamed.</summary>
