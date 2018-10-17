@@ -16,17 +16,17 @@
         <setting label="Defaults" type="action" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=Defaults)"/>
         <setting label="Reaper" type="action" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=Reaper)"/>
         <setting type="sep" />
-        <setting id="provider.1movie" type="bool" label="1MOVIE" default="true" />
-        <setting id="provider.2ddl" type="bool" label="2DDL" default="true" />
-        <setting id="provider.4kmovieto" type="bool" label="4KMOVIETO" default="true" />
-        <setting id="provider.123fox" type="bool" label="123FOX" default="false" />
-        <setting id="provider.123hbo" type="bool" label="123HBO" default="false" />
-        <setting id="provider.123hulu" type="bool" label="123HULU" default="true" />
-        <setting id="provider.123movies" type="bool" label="123MOVIES" default="true" />
-        <setting id="provider.123moviesgold" type="bool" label="123MOVIESGOLD" default="true" />
-        <setting id="provider.123netflix" type="bool" label="123NETFLIX" default="true" />
-        <setting id="provider.321movies" type="bool" label="321MOVIES" default="false" />
-        <setting id="provider.1080P" type="bool" label="1080P" default="true" />
+        <setting id="provider.1movie" type="bool" label="$NUMBER[1]MOVIE" default="true" />
+        <setting id="provider.2ddl" type="bool" label="$NUMBER[2]DDL" default="true" />
+        <setting id="provider.4kmovieto" type="bool" label="$NUMBER[4]KMOVIETO" default="true" />
+        <setting id="provider.123fox" type="bool" label="$NUMBER[123]FOX" default="false" />
+        <setting id="provider.123hbo" type="bool" label="$NUMBER[123]HBO" default="false" />
+        <setting id="provider.123hulu" type="bool" label="$NUMBER[123]HULU" default="true" />
+        <setting id="provider.123movies" type="bool" label="$NUMBER[123]MOVIES" default="true" />
+        <setting id="provider.123moviesgold" type="bool" label="$NUMBER[123]MOVIESGOLD" default="true" />
+        <setting id="provider.123netflix" type="bool" label="$NUMBER[123]NETFLIX" default="true" />
+        <setting id="provider.321movies" type="bool" label="$NUMBER[321]MOVIES" default="false" />
+        <setting id="provider.1080P" type="bool" label="$NUMBER[1080]P" default="true" />
         <setting id="provider.afdah" type="bool" label="AFDAH" default="true" />
         <setting id="provider.allrls" type="bool" label="ALLRLS" default="true" />
         <setting id="provider.allucen" type="bool" label="ALLUCEN" default="true" />
@@ -127,7 +127,7 @@
         <setting label="Disable All Debrid Sources" type="action" option="close" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=toggleAllDebrid&amp;setting=false&amp;open_id='1.1')"/>
         <setting label="Enable All Debrid Sources" type="action" option="close" action="RunPlugin(plugin://script.module.lambdascrapers/?mode=toggleAllDebrid&amp;setting=true&amp;open_id='1.2')"/>
         <setting type="sep" />
-        <setting id="provider.300mbfilms" type="bool" label="300MBFILMS" default="false" />
+        <setting id="provider.300mbfilms" type="bool" label="$NUMBER[300]MBFILMS" default="false" />
         <setting id="provider.bestmoviez" type="bool" label="BESTMOVIEZ" default="false" />
 <!--        <setting id="provider.ddls" type="bool" label="DDLS" default="false" />-->
         <setting id="provider.ddlvalley" type="bool" label="DDLVALLEY" default="false" />
