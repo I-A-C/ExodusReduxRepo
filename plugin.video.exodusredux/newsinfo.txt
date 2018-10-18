@@ -1,0 +1,10 @@
+Lambada scrapers is a collection of scrapers from various Exodus forks.
+
+[B]Important!![/B]  Lambda Scrapers is NOT ENABLED by default.  If you would like to use Lambda Scrapers follow these instructions: 
+1. Go to Tools > SETTINGS: Providers
+2. Set "Choose Module Provider Source" to "Lambda Scrapers"
+3. Open Lambda Scrapers Settings 
+4. In the "Modules" section, select the scraper set you want to use from the "Choose Module Scraper" pull-down menu.  Your choices are:  All | Placenta | Incursion | Yoda.
+[B]Important!![/B] The 'All' module is a mashup of scrapers from various Exodus forks with duplicates removed and includes a handful of fixed scrapers that are not already in another addon (yoda/placenta/etc)
+5. In the "Modules" section, select "Enable ALL Providers(for current Module)"
+6. In the "Providers" and "Debrid" sections, verify that all the "Providers" and "Debrid Only" (if using a debrid service) scrapers are turned on

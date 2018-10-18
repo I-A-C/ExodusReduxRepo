@@ -19,6 +19,7 @@
 
 
 import os,sys,urlparse
+import xbmc, xbmcaddon, xbmcgui
 
 from resources.lib.modules import control
 from resources.lib.modules import trakt
@@ -38,6 +39,13 @@ queueMenu = control.lang(32065).encode('utf-8')
 
 
 class navigator:
+    ADDON_ID      = xbmcaddon.Addon().getAddonInfo('id')
+    HOMEPATH      = xbmc.translatePath('special://home/')
+    ADDONSPATH    = os.path.join(HOMEPATH, 'addons')
+    THISADDONPATH = os.path.join(ADDONSPATH, ADDON_ID)
+    NEWSFILE      = 'https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/README.md'
+    LOCALNEWS     = os.path.join(THISADDONPATH, 'newsinfo.txt')
+
     def root(self):
         self.addDirectoryItem(32001, 'movieNavigator', 'movies.png', 'DefaultMovies.png')
         self.addDirectoryItem(32002, 'tvNavigator', 'tvshows.png', 'DefaultTVShows.png')
@@ -63,6 +71,8 @@ class navigator:
 
         self.addDirectoryItem(32010, 'searchNavigator', 'search.png', 'DefaultFolder.png')
 
+        self.addDirectoryItem('Info!!', 'newsNavigator', 'tools.png', 'DefaultAddonProgram.png')
+
         self.endDirectory()
 
     def furk(self):
@@ -70,6 +80,28 @@ class navigator:
         self.addDirectoryItem('Search', 'furkSearch', 'search.png', 'search.png')
         self.endDirectory()
 
+# News and Info
+    def news_local(self):
+            r = open(self.LOCALNEWS)
+            compfile = r.read()
+            self.showText('[B][COLOR red]Information and Updates[/COLOR][/B]', compfile)
+
+    def showText(self, heading, text):
+        id = 10147
+        xbmc.executebuiltin('ActivateWindow(%d)' % id)
+        xbmc.sleep(500)
+        win = xbmcgui.Window(id)
+        retry = 50
+        while (retry > 0):
+            try:
+                xbmc.sleep(10)
+                retry -= 1
+                win.getControl(1).setLabel(heading)
+                win.getControl(5).setText(text)
+                quit()
+                return
+            except: pass
+###
     def movies(self, lite=False):
         self.addDirectoryItem(32011, 'movieGenres', 'genres.png', 'DefaultMovies.png')
         self.addDirectoryItem(32012, 'movieYears', 'years.png', 'DefaultMovies.png')

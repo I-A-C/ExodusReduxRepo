@@ -70,6 +70,10 @@ if action == None:
     cache.cache_version_check()
     navigator.navigator().root()
 
+elif action == 'newsNavigator':
+    from resources.lib.indexers import navigator
+    navigator.navigator().news_local()
+
 elif action == "furkNavigator":
     from resources.lib.indexers import navigator
     navigator.navigator().furk()
