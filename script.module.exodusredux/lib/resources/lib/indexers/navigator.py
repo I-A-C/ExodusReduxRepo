@@ -243,6 +243,8 @@ class navigator:
         self.addDirectoryItem(32050, 'clearSources', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem(32604, 'clearCacheSearch', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem(32052, 'clearCache', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem(32614, 'clearMetaCache', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem(32613, 'clearAllCache', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem(32073, 'authTrakt', 'trakt.png', 'DefaultAddonProgram.png')
 
         self.endDirectory()
@@ -358,7 +360,7 @@ class navigator:
             control.setSetting('tvsearch', '')
             control.setSetting('moviesearch', '')
             control.refresh()
-            
+
     def clearCacheAll(self):
         control.idle()
         yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
@@ -366,7 +368,7 @@ class navigator:
         from resources.lib.modules import cache
         cache.cache_clear_all()
         control.infoDialog(control.lang(32057).encode('utf-8'), sound=True, icon='INFO')
-            
+
     def addDirectoryItem(self, name, query, thumb, icon, context=None, queue=False, isAction=True, isFolder=True):
         try: name = control.lang(name).encode('utf-8')
         except: pass

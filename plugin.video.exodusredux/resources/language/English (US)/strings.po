@@ -220,23 +220,23 @@ msgid "[B]SETTINGS[/B] : Providers"
 msgstr ""
 
 msgctxt "#32048"
-msgid "[B]Exodus Redux[/B] : Downloads"
+msgid "[B]EXODUS REDUX[/B] : Downloads"
 msgstr ""
 
 msgctxt "#32049"
-msgid "[B]Exodus Redux[/B] : Viewtypes"
+msgid "[B]EXODUS REDUX[/B] : Viewtypes"
 msgstr ""
 
 msgctxt "#32050"
-msgid "[B]Exodus Redux[/B] : Clear providers..."
+msgid "[B]EXODUS REDUX[/B] : Clear providers..."
 msgstr ""
 
 msgctxt "#32051"
-msgid "[B]Exodus Redux[/B] : Clear metadata..."
+msgid "[B]EXODUS REDUX[/B] : Clear metadata..."
 msgstr ""
 
 msgctxt "#32052"
-msgid "[B]Exodus Redux[/B] : Clear cache..."
+msgid "[B]EXODUS REDUX[/B] : Clear cache..."
 msgstr ""
 
 msgctxt "#32053"
@@ -776,7 +776,7 @@ msgid "Are you sure?"
 msgstr ""
 
 msgctxt "#32556"
-msgid "[B]Exodus Redux[/B] : Library"
+msgid "[B]EXODUS REDUX[/B] : Library"
 msgstr ""
 
 msgctxt "#32557"
@@ -784,15 +784,15 @@ msgid "[B]LIBRARY[/B] : Settings"
 msgstr ""
 
 msgctxt "#32558"
-msgid "[B]Exodus Redux[/B] : Update library..."
+msgid "[B]EXODUS REDUX[/B] : Update library..."
 msgstr ""
 
 msgctxt "#32559"
-msgid "[B]Exodus Redux[/B] : Movie folder..."
+msgid "[B]EXODUS REDUX[/B] : Movie folder..."
 msgstr ""
 
 msgctxt "#32560"
-msgid "[B]Exodus Redux[/B] : TV folder..."
+msgid "[B]EXODUS REDUX[/B] : TV folder..."
 msgstr ""
 
 msgctxt "#32561"
@@ -823,22 +823,146 @@ msgctxt "#32571"
 msgid "Hide movies in cinema"
 msgstr ""
 
-msgctxt "#32372"
-msgid "When playback ends..."
-msgstr ""
-
-msgctxt "#32373"
-msgid "Force container refresh"
-msgstr ""
-
-msgctxt "#32374"
-msgid "Enable Debug"
+msgctxt "#32572"
+msgid "Protected Link. Please enter account credentials in the settings."
 msgstr ""
 
 msgctxt "#32580"
 msgid "Films/TV Movies"
 msgstr ""
 
+msgctxt "#32581"
+msgid "Results Limit"
+msgstr ""
+
+msgctxt "#32582"
+msgid "Personal API keys provide quicker API responses."
+msgstr ""
+
+msgctxt "#32583"
+msgid "Become a VIP member for many benefits at: https://fanart.tv/vip"
+msgstr ""
+
+msgctxt "#32584"
+msgid "Sort order for Trakt Watched Progress"
+msgstr ""
+
+msgctxt "#32585"
+msgid "Recently aired"
+msgstr ""
+
+msgctxt "#32586"
+msgid "Recently watched"
+msgstr ""
+
+msgctxt "#32587"
+msgid "Show Extra Source Info"
+msgstr ""
+
+msgctxt "#32588"
+msgid "Premium Source Identifier Color"
+msgstr ""
+
+msgctxt "#32589"
+msgid "Blue"
+msgstr ""
+
+msgctxt "#32590"
+msgid "Red"
+msgstr ""
+
+msgctxt "#32591"
+msgid "Yellow"
+msgstr ""
+
+msgctxt "#32592"
+msgid "Deep Pink"
+msgstr ""
+
+msgctxt "#32593"
+msgid "Cyan"
+msgstr ""
+
+msgctxt "#32594"
+msgid "Lawn Green"
+msgstr ""
+
+msgctxt "#32595"
+msgid "Gold"
+msgstr ""
+
+msgctxt "#32596"
+msgid "Magenta"
+msgstr ""
+
+msgctxt "#32597"
+msgid "Yellow Green"
+msgstr ""
+
+msgctxt "#32598"
+msgid "No Color"
+msgstr ""
+
+msgctxt "#32599"
+msgid "Getting genre information from Trakt"
+msgstr ""
+
+msgctxt "#32600"
+msgid "Preparing sources"
+msgstr ""
+
+msgctxt "#32601"
+msgid "Total"
+msgstr ""
+
+msgctxt "#32602"
+msgid "Waiting for"
+msgstr ""
+
+msgctxt "#32603"
+msgid "New search..."
+msgstr ""
+
+msgctxt "#32604"
+msgid "[B]EXODUS REDUX[/B] : Clear search history..."
+msgstr ""
+
+msgctxt "#32605"
+msgid "Click to clear search history"
+msgstr ""
+
+msgctxt "#32606"
+msgid "Prem"
+msgstr ""
+
+msgctxt "#32607"
+msgid "Normal"
+msgstr ""
+
 msgctxt "#32608"
-msgid "Auto Updating Trakt Library"
+msgid "Auto Syncing Trakt Library"
+msgstr ""
+
+msgctxt "#32613"
+msgid "[B]EXODUS REDUX[/B] : Clear All Cache..."
+msgstr ""
+
+msgctxt "#32614"
+msgid "[B]EXODUS REDUX[/B] : Clear Meta Cache..."
+msgstr ""
+
+msgctxt "#32616"
+msgid "Debugging"
+msgstr ""
+
+msgctxt "#32617"
+msgid "Debug Log"
+msgstr ""
+
+msgctxt "#32618"
+msgid "Kodi Log"
+msgstr ""
+
+msgctxt "#32619"
+msgid "Addon Log"
 msgstr ""

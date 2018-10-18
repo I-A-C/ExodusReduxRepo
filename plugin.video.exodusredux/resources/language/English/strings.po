@@ -220,7 +220,7 @@ msgid "[B]SETTINGS[/B] : Providers"
 msgstr ""
 
 msgctxt "#32048"
-msgid "[B]Exodus Redux[/B] : Downloads"
+msgid "[B]EXODUS REDUX[/B] : Downloads"
 msgstr ""
 
 msgctxt "#32049"
@@ -784,15 +784,15 @@ msgid "[B]LIBRARY[/B] : Settings"
 msgstr ""
 
 msgctxt "#32558"
-msgid "[B]Exodus Redux[/B] : Update library..."
+msgid "[B]EXODUS REDUX[/B] : Update library..."
 msgstr ""
 
 msgctxt "#32559"
-msgid "[B]Exodus Redux[/B] : Movie folder..."
+msgid "[B]EXODUS REDUX[/B] : Movie folder..."
 msgstr ""
 
 msgctxt "#32560"
-msgid "[B]Exodus Redux[/B] : TV folder..."
+msgid "[B]EXODUS REDUX[/B] : TV folder..."
 msgstr ""
 
 msgctxt "#32561"
@@ -941,6 +941,14 @@ msgstr ""
 
 msgctxt "#32608"
 msgid "Auto Syncing Trakt Library"
+msgstr ""
+
+msgctxt "#32613"
+msgid "[B]EXODUS REDUX[/B] : Clear All Cache..."
+msgstr ""
+
+msgctxt "#32614"
+msgid "[B]EXODUS REDUX[/B] : Clear Meta Cache..."
 msgstr ""
 
 msgctxt "#32616"

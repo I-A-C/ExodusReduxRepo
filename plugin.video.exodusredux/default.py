@@ -153,6 +153,14 @@ elif action == 'clearCache':
 elif action == 'clearCacheSearch':
     from resources.lib.indexers import navigator
     navigator.navigator().clearCacheSearch()
+
+elif action == 'clearAllCache':
+    from resources.lib.indexers import navigator
+    navigator.navigator().clearCacheAll()
+
+elif action == 'clearMetaCache':
+    from resources.lib.indexers import navigator
+    navigator.navigator().clearCacheMeta()
     
 elif action == 'infoCheck':
     from resources.lib.indexers import navigator
