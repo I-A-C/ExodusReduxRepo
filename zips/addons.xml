@@ -84,18 +84,18 @@
 		</extension>
 </addon>
 
-<addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.4" provider-name="I-A-C">
+<addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.6" provider-name="I-A-C">
 	<extension point="xbmc.addon.repository" name="Exodus Redux Repo">
-          <dir>
-		<info compressed="false">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/I-A-C/ExodusReduxRepo/master/zips/</datadir>
-          </dir>
-          <dir>
+	<dir>
+        <info compressed="false">https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/I-A-C/zips/master/</datadir>
+	</dir>
+	<dir>
 		<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-          </dir>
+	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Exodus Redux is a educational add-on. We do not host any of the contents streamed.</summary>
