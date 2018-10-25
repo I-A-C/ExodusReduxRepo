@@ -1,2 +1,2 @@
 # Exodus Redux and LambdaScrapers
-## **Addon and Scraper Module for Exodus based add ons.**
+## **CLOSED.  Development moved to https://github.com/I-A-C/ExodusReduxRepo.git **
